@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contato | Daphne</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="topo">
+    <a class="logo" href="index.html">Daphne</a>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="sobre.html">Quem sou eu</a>
+      <a href="portfolio.html">Portfólio</a>
+      <a href="contato.html" class="ativo">Contato</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="bloco">
+      <h1>Contato</h1>
+      <p>Quer conversar ou deixar um recado? Preencha abaixo.</p>
+      <form id="form-contato" class="form">
+        <label>Nome <input name="nome" maxlength="100" required></label>
+        <label>E-mail <input name="email" type="email" maxlength="150" required></label>
+        <label>Mensagem <textarea name="mensagem" maxlength="1000" rows="5" required></textarea></label>
+        <button class="btn" type="submit">Enviar mensagem</button>
+        <p id="msg" role="status"></p>
+      </form>
+    </section>
+  </main>
+
+  <footer class="rodape">
+    <p><strong>Daphne SOBRENOME</strong> · <a href="https://instagram.com/SEU_INSTAGRAM" target="_blank" rel="noopener">Instagram</a></p>
+    <p>Estudante de <a href="https://SITE-DA-ESCOLA.com.br" target="_blank" rel="noopener">NOME DA ESCOLA</a> · <span id="ano"></span></p>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="js/config.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
