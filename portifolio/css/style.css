@@ -1,0 +1,66 @@
+:root {
+  --fundo: #f7f5fb;
+  --tinta: #1e1b2e;
+  --violeta: #6d4aff;
+  --menta: #2ec4a6;
+  --suave: #e6e0f5;
+}
+
+* { box-sizing: border-box; margin: 0; }
+
+body {
+  font-family: "Sora", system-ui, sans-serif;
+  background: var(--fundo);
+  color: var(--tinta);
+  line-height: 1.7;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+main { flex: 1; }
+a { color: var(--violeta); }
+:focus-visible { outline: 3px solid var(--menta); outline-offset: 3px; }
+
+/* Menu */
+.topo { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 12px; padding: 18px 6vw; }
+.logo { font-weight: 800; font-size: 1.3rem; text-decoration: none; color: var(--tinta); }
+nav { display: flex; flex-wrap: wrap; gap: 6px; }
+nav a { text-decoration: none; color: var(--tinta); padding: 6px 14px; border-radius: 999px; }
+nav a:hover, nav a.ativo { background: var(--violeta); color: #fff; }
+
+/* Home */
+.hero { padding: 12vh 6vw; max-width: 900px; }
+.oi { color: var(--violeta); font-weight: 600; }
+.hero h1 { font-size: clamp(4rem, 16vw, 9rem); font-weight: 800; line-height: 1; letter-spacing: -0.04em; }
+.sub { max-width: 34em; margin: 20px 0 28px; font-size: 1.15rem; }
+.botoes { display: flex; flex-wrap: wrap; gap: 12px; }
+
+/* Botões */
+.btn { display: inline-block; border: 2px solid var(--violeta); background: var(--violeta); color: #fff; padding: 12px 24px; border-radius: 12px; font: inherit; font-weight: 600; text-decoration: none; cursor: pointer; }
+.btn:hover { background: var(--tinta); border-color: var(--tinta); color: #fff; }
+.btn-claro { background: transparent; color: var(--violeta); }
+
+/* Páginas internas */
+.bloco { max-width: 760px; padding: 6vh 6vw 8vh; }
+.bloco h1 { font-size: 2.4rem; margin-bottom: 16px; }
+.bloco h2 { font-size: 1.3rem; margin: 32px 0 8px; }
+
+/* Projetos */
+.grade { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 16px; margin-top: 16px; }
+.card { display: block; background: #fff; border: 2px solid var(--suave); border-radius: 14px; padding: 18px; color: var(--tinta); text-decoration: none; }
+.card:hover { border-color: var(--violeta); }
+.card h3 { font-size: 1.05rem; margin-bottom: 6px; color: var(--violeta); }
+
+/* Formulários */
+.form { display: grid; gap: 14px; margin-top: 16px; }
+.form label { display: grid; gap: 4px; font-weight: 600; }
+.form input, .form textarea { font: inherit; padding: 10px 12px; border: 2px solid var(--suave); border-radius: 10px; background: #fff; }
+.form input:focus, .form textarea:focus { border-color: var(--violeta); outline: none; }
+.form .btn { justify-self: start; }
+.ok { color: #0a7a64; }
+.erro { color: #c0262d; }
+
+/* Rodapé */
+.rodape { background: var(--tinta); color: #fff; padding: 24px 6vw; text-align: center; font-size: 0.9rem; }
+.rodape a { color: var(--menta); }
